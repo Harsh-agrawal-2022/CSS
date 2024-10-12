@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: rgb(134, 134, 153);
+        } */
+
+        /* .box::first-line {
+            color: red;
+        } */
+        
+        /* .boxes * {
+            color: darkred;
+            border: 2px solid black;
+        } */
+
+        /* grouping of selectors... */
+        /* p,a,.box, [data-color="primary"] {
+            margin-top: 45px;
+            padding-top: 45px;
+        } */
+
+        /* .box:nth-child(even){
+            background-color: blue;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: brown;
+        } */
+
+        /* from this way, the element can be dynamically inserted through CSS..  */
+        .boxes::before{
+            content: "I am good boy";
+        }
+
+        .boxes::after{
+            content: "I am good boy";
+        }
+
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+        .box::first-letter{
+            color: crimson;
+            font-size: 45px;
+        }
+
+        input::placeholder{
+            color: rgb(194, 120, 120);
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <!-- <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor architecto sint nam laboriosam, dolorum alias doloremque minima beatae sunt vero dolores! Quos facere deleniti fuga blanditiis sapiente error perspiciatis sint! Nesciunt debitis laboriosam error ut. Vitae, accusamus error expedita deserunt ipsum nihil debitis quisquam sint consequatur tempore eveniet ratione ipsam iure corporis aspernatur possimus voluptas quibusdam soluta nulla minima odit a labore repellendus in! Perspiciatis possimus officiis dolorum, iste numquam corporis eveniet inventore molestias quae at consequatur provident deserunt officia praesentium animi quos expedita iusto saepe dicta eaque sunt pariatur. Corporis vero ullam perferendis aperiam dolor officiis corrupti.</div> -->
+        <div data-color="primary" class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>

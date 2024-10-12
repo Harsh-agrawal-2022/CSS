@@ -1,0 +1,55 @@
+<!-- hint - x mai alag animation banana  hai or y mai alag animation banana hai , for bounce  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+        }
+        .box {
+            height: 123px;
+            width: 123px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 70px;
+            animation: y-direction;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes x-direction {
+            from {
+
+            }
+            to {
+                transform: translateX(80vw);
+            }
+        }
+
+        @keyframes y-direction {
+            from {
+                transform: translateY(80vh);
+            }
+            to {
+                transform: translateY(40vh);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

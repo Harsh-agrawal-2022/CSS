@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 3px solid blue;
+            background-color: antiquewhite;
+            display: flex;
+            height: 80vh;
+            /* justify-content:center; */
+            /* align items are used when we have only one line  */
+            align-items: center;
+            /* flex-direction: column; */
+            /* wrap matlab jab hamare items overflow karke new line aa jate hai  */
+            flex-wrap: wrap;
+            /* align content is used when we have more than one line... */
+            /* align-content: flex-start; */
+            /* there is no justify items in flexbox */
+            flex-flow: row wrap;
+            /* gap: 30px;
+            row-gap: 40px;
+            column-gap: 10px; */
+            gap: 40px 10px;
+        }
+
+        .item {
+            /* by default flex grow is 0, by changing it to 1 we said the ki pura jo flex box ki width hai usme sare items equal space lenge pure width ko lete huy */
+            /* flex-grow: 1; */
+            height: 32px;
+            width: 32px;
+            border: 2px solid black;
+            /* margin: 5px; */
+            background-color: steelblue;
+
+        }
+        /* order class ka matlb jitna order jyada hoga utna hi late ayga or jitna order kam hoga utna hi jaldi ayga */
+
+        .order-1{
+            order: 1;
+        }
+
+        .order-2{
+            order: 2;
+        }
+
+        .order-3{
+            order: 3;
+        }
+
+        .item1{
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1"></div>
+            <div class="item"></div>
+            <div class="item order-1">23</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item order-2">66</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item order-1">99</div>
+            <div class="item"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>

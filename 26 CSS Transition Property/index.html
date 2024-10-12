@@ -1,0 +1,42 @@
+<!-- transition ka matlab hota hai ek state se dusre state per bahut hi smoothly jana.. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+
+        .container {
+            background-color: yellowgreen;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 5vw;
+            height: 4vh;
+            /* transition-property: background-color , transform; */
+            /* transition duration :- iska matlab y animation kitne der tak chalega.. */
+            /* transition-duration: 3s; */
+            /* transition-timing-function: ease-in-out; */
+            /* transition delay :- iska matlab y animation kitni der bad chalega.. */
+            /* transition-delay: 2s; */
+            transition: all 3s ease-in-out 1s;
+        }
+
+        .translate {
+            transform: translateX(10vw) translateY(10vh);
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>
